@@ -14,3 +14,16 @@
 #    #
 #    #
 ######
+l_sq = int(input('input lenth of side square:'))
+n = 0
+m = 0
+while n < l_sq:
+    while m < l_sq:
+        if n == 0 or n == l_sq - 1 or m == 0 or m == l_sq - 1:
+            print('#', end='')
+        else:
+            print(' ', end='')
+        m += 1
+    n += 1
+    m = 0
+    print()
