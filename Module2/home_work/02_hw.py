@@ -7,4 +7,10 @@
 # коров, корова или коровы
 # Например, 1 корова, 2 коровы, 5 коров, 125 коров.
 
-# TODO: your code here
+cow = int(input('Input quantity of cows:'))
+end_w = 'ы'
+if 10 <= cow <= 20 or 5 <= cow % 10 <= 9 or cow == 0:
+    end_w = ''
+if cow % 10 == 1:
+    end_w = 'а'
+print('На лугу пасется ', cow, ' коров', end_w, sep='')
