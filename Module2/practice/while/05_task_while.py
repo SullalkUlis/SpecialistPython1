@@ -18,3 +18,18 @@
 
 
 # TODO: your code here
+a = int(input('Input a where 2 < a < 30 : '))
+if a < 2:
+    a = 2
+i = 0
+j = 0
+while i <= a:
+    while j <= a:
+        if i == j or i == a - j:
+            print('#', end='')
+        else:
+            print(' ', end='')
+        j += 1
+    print()
+    i += 1
+    j = 0
