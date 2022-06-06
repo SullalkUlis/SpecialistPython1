@@ -31,3 +31,9 @@
 # 20 199.8 Rub.
 
 # TODO: your code here
+price = float(input('input price: '))
+n = int(input('input quantity: '))
+m = 0
+while m < n:
+    m += 1
+    print(m, ' ', round(m * price,2), ' Rub.')
