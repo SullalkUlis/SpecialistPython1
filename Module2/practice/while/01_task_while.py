@@ -3,3 +3,12 @@
 # Формат выходных данных: Выведите все числа, требуемые по условию задачи.
 
 # TODO: your code here
+a = int(input('input a: '))
+b = int(input('input b (where b>a): '))
+c = b - a
+while a <= b:
+    if a % 2 == 0:
+        print(a, end='')
+        a = a + 2
+    else:
+        a = a + 1
