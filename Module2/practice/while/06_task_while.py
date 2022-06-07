@@ -16,4 +16,30 @@
 # 220 284
 # 284 220
 
-# TODO: your code here
+n = int(input('Input Number:'))
+sum1, sum2 = 0, 0
+m = n
+i, j = 1, 1
+f1, f2 = 0, 0
+while m >= n * 0.02:  # 0.02 для уменьшения количества итераций, 10000*0.2 чтобы попали 220 и 284 ниже нет
+    if m % i == 0 and i < n:
+        sum1 = sum1 + i
+    i += 1
+    if (sum1 == f1 and m == f2) or (sum1 == f2 and m == f1): # условие для вывода пары не более 1 раза
+        continue
+    if m * 0.75 < sum1 < m:  # 0.75 для уменьшения количества итераций, разница между числами не более 25%
+        while j < sum1:
+            if sum1 % j == 0:
+                sum2 = sum2 + j
+            if sum2 == m:
+                f1 = sum1
+                f2 = sum2
+                print(f1, ' дружит с ', f2)
+                break
+            j += 1
+        j = 1
+        sum2 = 0
+    if sum1 > m:
+        sum1 = 0
+        i = 1
+        m = m - 1
