@@ -15,15 +15,11 @@
 
 ### Решение задачи
 
-```python
-# TODO: you code here...
-```
-
----
-
-### Подсказки
-
-<details>
-<summary>Подсказка-1</summary>
-Смотри пример "Выполнение цикла пока не будет введено нужное значение"
-</details>
+summa = 0
+while True:
+    sim = input('input numberes while стоп:')
+    if sim.upper() == 'СТОП':
+        break
+    elif int(sim) > 0:
+        summa += 1
+print('Quantity of pozitive numberes:', summa)
