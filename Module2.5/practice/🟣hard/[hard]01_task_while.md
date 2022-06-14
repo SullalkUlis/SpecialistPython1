@@ -14,16 +14,18 @@
 
 
 ### Решение задачи
-
-```python
-# TODO: you code here...
-```
-
-### Данные для самопроверки
-
-| Дано | Результат |
-| :---: | --- |
-|    1    | 0 |
-|    4    | 2 |
-|    7    | 8  |
-|    11    | 55 |
+num_f = int(input('Input number:'))
+fib = 0
+i, j = 1, 0
+while i < num_f:
+    #print(i, ' ', fib, ' ', j)
+    if 0 <= i <= 1:
+        fib = j + i
+    elif i <= 3:
+        fib = j + fib
+        j = 1
+    else:
+        fib = j + fib
+        j = fib - j
+    i += 1
+print('для номера:', num_f, ' число Фибоначчи в последовательности будет: ', fib, ' c учетом 1-го члена 0')
