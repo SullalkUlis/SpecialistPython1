@@ -15,24 +15,22 @@
 
 ### Решение задачи
 
-```python
-# TODO: you code here...
-```
-
----
-
-### Подсказки
-<details>
-<summary>Подсказка-1</summary>
-Для решения задачи вам понадобятся вложенные циклы.
-
-```python
-while ...:  # внешний цикл
-    while ...:  # внутренний цикл
-        ...
-```
-Внешний цикл будет перебирать числа из диапазона, а внутренний проверять, является ли число совершенным.
-</details>
+a = int(input('Input a:'))
+b = int(input('Input b:'))
+total = 0
+while a <= b:
+    summa = 0
+    i = 1
+    while i <= a:
+        if a % i == 0 and i != a:
+            summa += i
+        i += 1
+    if a == summa:
+        total += summa
+        print(a, end=' ')
+    a += 1
+print()
+print(total)
 
 <details>
 <summary>Подсказка-2</summary>
