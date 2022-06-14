@@ -5,3 +5,20 @@
 # Пример:
 # Дано: [2, -5, 8, 9, -25, 25, 4]
 # Результат: [3, 5, 2]
+import random
+
+n = int(input('Введите количество чисел в списке:'))
+i = 0
+sp_nam = []
+while i < n:
+    sp = random.randint(-100, 100)
+    sp_nam.append(sp)
+    print(sp_nam[i], end=' ')
+    i += 1
+print()
+sp_sq = []
+for i in sp_nam:
+    if i > 0 and (i ** 0.5) % 2 in (0, 1): # eсли остаток 1 или 2 то число целое без дробной части
+        sp = int(i ** 0.5)
+        sp_sq.append(sp)
+print(sp_sq, end=' ')
