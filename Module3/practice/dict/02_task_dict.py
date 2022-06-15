@@ -7,3 +7,11 @@ values = ['Петр', 'Первый', 42, 1300]
 # TODO: your code here
 # Нужно получить словарь:
 # {'name': 'Петр', 'surname': 'Первый', 'age': 42, 'rate': 1300}
+keys = ['name', 'surname', 'age', 'rate']
+values = ['Петр', 'Первый', 42, 1300]
+dic = {}
+j = 0
+for i in keys:
+    dic[i] = values[j]
+    j += 1
+print(dic)
