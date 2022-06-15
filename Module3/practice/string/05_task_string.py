@@ -6,3 +6,12 @@
 
 # TODO: your code here
 
+text_out = ''
+for i in text:
+    if i not in ('.', ',', ':', ';', '!', '"', '"', '?') and i.isspace() == False:
+        text_out = text_out + i.upper()
+if text_out == text_out[::-1]:
+    print('Да')
+else:
+    print('Нет')
+print(text_out)
