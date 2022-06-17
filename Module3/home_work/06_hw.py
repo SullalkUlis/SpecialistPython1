@@ -31,15 +31,45 @@ items = [
         "price": 1700
     },
 ]
-# Найдите:
+max_p = 0
+for i in items:
+    if i['price'] > max_p:
+        max_p = i['price']
+        max_e = i
+quant = 1
+sur = []
+j = 0
+while True:
+    it = items[j]
+    it_n = {}
+    i = j
+    while i < len(items) - 1:
+        if it['brand'] == items[i + 1]['brand']:
+            quant += 1
+            it_n['brand'] = items[i + 1]['brand']
+            it_n['quantity'] = quant
+        i += 1
+    j += 1
+    if quant > 1:
+        sur.append(it_n)
+    quant = 1
+    if j == len(items):
+        break
+max_q = 0
+k = 0
 print("Товары на складе представлены брэндами: ")
-
-# TODO: your code here
-
+for i in range(len(sur)):
+    print('#', i + 1, sur[i]['brand'])
+    if sur[i]['quantity'] > max_q:
+        max_q = sur[i]['quantity']
+        ma = sur[i]
+    elif sur[i]['quantity'] == max_q:
+        k += 1
 print("На складе больше всего товаров брэнда(ов): ")
-
-# TODO: your code here
-
+if k == 0:
+    print(ma['brand'])
+else:
+    print('Одинаково:', ma['brand'],'и ', sur[-1]['brand'])
+#print('Бренды', sur)
 print("На складе самый дорогой товар брэнда(ов): ")
-
-# TODO: your code here
+print(max_e['name'], max_e['brand'], max_e['price'])
