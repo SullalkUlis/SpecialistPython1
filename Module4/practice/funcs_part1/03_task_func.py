@@ -3,7 +3,9 @@
 
 def distance(x1, y1, x2, y2):
     # TODO: your code here
-    pass
+    '''AB = √(xb - xa)2 + (yb - ya)2'''
+    l = ((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5
+    return round(l,2)
 
 
 # Тестируем функцию
