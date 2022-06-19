@@ -2,9 +2,16 @@
 # Решение реализовать в виде функции.
 # Билет считается счастливым, если сумма его первых и последних цифр равны.
 
-def lucky_ticket(ticket_number):
-    # TODO: your code here
-    pass
+def may_abs(a):
+    if a < 0:
+        c = a * -1
+    else:
+        c = a
+    return c
+
+nam=float(input('введите число:'))
+res = may_abs(-10)
+print(res)
 
 
 # Тестируем функцию
