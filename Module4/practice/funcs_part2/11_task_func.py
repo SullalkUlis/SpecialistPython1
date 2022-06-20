@@ -2,7 +2,16 @@
 
 def average(*args):
     # TODO: тело из предыдущей задачи
-    pass
+    def average(*args):
+    print(*args,'++')
+    ar = args[0]
+    count_arg = 0
+    summa = 0
+    for arg in ar:
+        count_arg += 1
+        summa = summa + arg
+        print(arg, ':', count_arg, ':', summa)
+    return summa / count_arg
 
 
 def gen_list(size, at=-10, to=10):
