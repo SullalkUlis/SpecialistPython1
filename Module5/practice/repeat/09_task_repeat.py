@@ -6,3 +6,17 @@
 # Результат: фруктов на букву “к” больше.
 # Дано: [“ананас”, “яблоко”, “Арбуз”, “киви”, “Клюква”, “банан”, “хурма”]
 # Результат: фруктов на букву “к”и “а” больше.
+def prodacts_alfa(*product_name):
+    pr_lib = {}
+    for p_name in product_name:
+        key = p_name[0].lower()
+        if not key in pr_lib:
+            pr_lib[key] = 1
+        else:
+            pr_lib[key] += 1
+    pr_lib = sorted(pr_lib.items(), key=lambda x: x[1])
+    if pr_lib[-1][1] > pr_lib[-2][1]:
+        str_out = f'Результат фруктов больше на букву {pr_lib[-1][0]}'
+    else:
+        str_out = f'Результат: фруктов на букву {pr_lib[-1][0]} и {pr_lib[-2][0]} больше'
+    return str_out
