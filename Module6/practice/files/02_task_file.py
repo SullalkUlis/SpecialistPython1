@@ -11,5 +11,13 @@
 # преобразовав каждую цену к числу(цены в файле хранятся в виде строк)
 # А затем, работам с привычным списком, выполните задания
 prices = []
-
-# Подсказка: для преобразования строки в список вспомните про метод строки .split()
+path = 'Data/sold.txt'
+f = open(path, 'r', encoding='UTF-8')
+for line in f:
+    price_line = line.split()
+    for price in price_line:
+        prices.append(float(price))
+prices.sort()
+print('Товаров было продано на сумму:', sum(prices))
+print('Самый дешевый проданный товар:', prices[0])
+print('Самый дорогой проданный товар:', prices[-1])
